@@ -16,6 +16,8 @@ BROWSE <- function(url = NULL, config = list(), ..., handle = NULL) {
   hu <- handle_url(handle, url, ...)
   if (interactive()) {
     utils::browseURL(hu$url)
+    message("If the browser doesn't start please point your browser to the following url: ")
+    message(hu$url)
   } else {
     message("Please point your browser to the following url: ")
     message(hu$url)
